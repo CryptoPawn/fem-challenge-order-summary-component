@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+
+
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 16px;
+}
+
+:root {
+    /* Primary Colors (pc) */
+    --pc-paleblue: hsl(225, 100%, 94%);
+    --pc-brightblue: hsl(245, 75%, 52%);
+
+    /* Neutral Colors (nc) */
+    --nc-verypaleblue: hsl(225, 100%, 98%);
+    --nc-desatblue: hsl(224, 23%, 55%);
+    --nc-darkblue: hsl(223, 47%, 23%);
+
+    /* Secondary Colors (sc) */
+    --sc-brightblue-lighter: hsl(245, 100%, 73%);
+    --sc-brightblue-transparent: rgba(56, 41, 224, 0.329);
+
+
+
+    /* Font Weight (fw) */
+    --fw-regular: 500;
+    --fw-medium: 700;
+    --fw-bold: 900;
+
+
+
+    /* Filter Drop Shadow (fds) */
+    --fds-button: drop-shadow(0px 10px 10px rgba(56, 41, 224, 0.329));
+    --fds-component: drop-shadow(0px 20px 20px rgba(56, 41, 224, 0.137));
+}
+
+
+
+/*///   MEDIA   /////////////////////////////////////////////////////////////////////*/
+
+@media screen and (max-width: 460px) {
+    body {  
+        background-image: url(images/pattern-background-mobile.svg)!important;
+    }
+
+    .component {
+        width: 330px!important;
+        height: 570px!important;
+    }
+
+    .hero-img {
+        height: 160px!important;
+    }
+
+    .content {
+        padding: 25px 25px!important;
+    }
+
+    .price-container > *, .change-button {
+        font-size: 14px!important;
+    }
+
+    .plan-container {
+        padding: 20px!important;
+    }
+}
+
+/*///////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+/*///   STATES   ////////////////////////////////////////////////////////////////////*/
+
+.change-button:hover {
+    text-decoration: none;
+    color: var(--sc-brightblue-lighter);
+}
+
+.proceed-button:hover {
+    background-color: var(--sc-brightblue-lighter);
+}
+.cancel-button:hover {
+    color: var(--nc-darkblue);
+}
+
+/*///////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+/*///   BASE ELEMENTS   /////////////////////////////////////////////////////////////*/
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(images/pattern-background-desktop.svg);
+    background-repeat: repeat-x;
+    background-color: var(--pc-paleblue);
+}
+
+.top-text, button {
+    text-align: center;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: var(--fw-bold);
+    color: var(--nc-darkblue);
+}
+
+h2 {
+    font-weight: var(--fw-medium);
+    color: var(--nc-darkblue);
+}
+
+p {
+    color: var(--nc-desatblue);
+}
+
+a {
+    font-weight: var(--fw-medium);
+    color: var(--pc-brightblue);
+}
+
+button {
+    font-weight: var(--fw-medium);
+    cursor: pointer;
+}
+
+/*///////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+/*///   CLASSES   ///////////////////////////////////////////////////////////////////*/
+
+.component {
+    width: 450px;
+    height: 700px;
+    background-color: white;
+    border-radius: 20px;
+    text-align: center;
+    filter: var(--fds-component);
+}
+
+
+
+.hero-img {
+    width: 100%;
+    height: 220px;
+    border-radius: 20px 20px 0 0;
+}
+
+
+
+.content {
+    position: relative;
+    padding: 50px;
+}
+
+
+
+.top-text > * {
+    margin-bottom: 20px;
+}
+
+
+
+.plan-container {
+    background-color: var(--nc-verypaleblue);
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    align-items: center;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+.icon {
+    margin-right: 20px;
+}
+.change-button {
+    position: relative;
+    float: right;
+    margin-left: auto;
+}
+
+
+
+.proceed-button {
+    padding: 20px 0;
+    width: 100%;
+    color: var(--nc-verypaleblue);
+    background-color: var(--pc-brightblue);
+    border-radius: 15px;
+    margin-bottom: 15px;
+    filter: var(--fds-button);
+}
+.cancel-button {
+    color: var(--nc-desatblue);
+    background-color: transparent;
+    padding: 10px 15px;
+}
+
+/*///////////////////////////////////////////////////////////////////////////////////*/
